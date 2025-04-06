@@ -1,3 +1,4 @@
+#INIT
 NCCL_P2P_DISABLE=1  python train.py --outdir=logs \
                 --cfg=celeba --seg_weight=2 --data=data/celebamask_train.zip \
                 --mask_data=data/celebamask_train_label.zip \
