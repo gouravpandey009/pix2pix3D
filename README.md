@@ -11,16 +11,8 @@ https://user-images.githubusercontent.com/28395429/222578030-8bb2c727-397e-44b6-
 
 [3D-aware Conditional Image Synthesis](https://arxiv.org/abs/2302.08509)
 
-CVPR 2023
+CVPR 2025
 
- [Kangle Deng](https://dunbar12138.github.io/),
- [Gengshan Yang](https://gengshan-y.github.io/),
- [Deva Ramanan](https://www.cs.cmu.edu/~deva/),
- [Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/)
-
-Carnegie Mellon University
-
----
 
 We propose pix2pix3D, a 3D-aware conditional generative model for controllable photorealistic image synthesis. Given a 2D label map, such as a segmentation or edge map, our model learns to synthesize a corresponding image from different viewpoints. To enable explicit 3D user control, we extend conditional generative models with neural radiance fields. Given widely-available monocular images and label map pairs, our model learns to assign a label to every 3D point in addition to color and density, which enables it to render the image and pixel-aligned label map simultaneously. Finally, we build an interactive system that allows users to edit the label map from any viewpoint and generate outputs accordingly.
 
@@ -150,21 +142,3 @@ Training parameters:
 We follow the dataset format of EG3D [here](https://github.com/NVlabs/eg3d#preparing-datasets). You can obtain the segmentation masks of your own dataset by [DINO clustering](https://github.com/ShirAmir/dino-vit-features/blob/main/part_cosegmentation.py), and obtain the edge map by [pidinet](https://github.com/hellozhuo/pidinet) and [informative drawing](https://github.com/carolineec/informative-drawings).
 
 ---
-
-## Citation
-
-If you find this repository useful for your research, please cite the following work.
-```
-@inproceedings{kangle2023pix2pix3d,
-  title={3D-aware Conditional Image Synthesis},
-  author={Deng, Kangle and Yang, Gengshan and Ramanan, Deva and Zhu, Jun-Yan},
-  booktitle = {CVPR},
-  year = {2023}
-}
-```
-
----
-
-## Acknowledgments
-We thank Sheng-Yu Wang, Nupur Kumari, Gaurav Parmer, Ruihan Gao, Muyang Li, George Cazenavette, Andrew Song, Zhipeng Bao, Tamaki Kojima, Krishna Wadhwani, Takuya Narihira, and Tatsuo Fujiwara for their discussion and help. We are grateful for the support from Sony Corporation, Singapore DSTA, and the CMU Argo AI Center for Autonomous Vehicle Research.
-This codebase borrows heavily from [EG3D](https://github.com/NVlabs/eg3d) and [StyleNeRF](https://github.com/facebookresearch/StyleNeRF). 
